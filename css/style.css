@@ -3,4 +3,236 @@
     margin: 0;
     box-sizing: border-box;
     font-family: sans-serif;
+    color: #000000;
+}
+.navbar{
+    /* height: 300px; */
+    padding: 20px;
+    display: flex;
+    /* flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center; */
+
+    justify-content: space-between;
+
+}
+/* .navbar > * {
+    outline: 1px solid;
+} */
+
+/* Toggler */
+#toggler{
+    border: none;
+    background-color: #26e3ad;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    display: none;
+}
+
+#toggler:active{
+    box-shadow: 0 0 10px 0 #eec8c8;
+}
+
+.navbar > a{
+    font-size: 30px;
+}
+
+.navbar > ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.navbar > ul a{
+    text-decoration: none;
+    font-weight: 100;
+}
+
+/* Hero */
+.hero{
+    height: 90vh;
+    /* background-image: linear-gradient(to right, red, blue); */
+    background-image: linear-gradient(90deg, #ffffff 68%, #26e3ad 53%);
+
+    display: flex;
+    padding: 30px;
+}
+
+.hero > *{
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 100%;
+
+    flex: 1 ;
+}
+
+.hero > div{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 180px;
+    padding-top: 80px;
+    padding-left: 70px;
+    gap: 20px;
+}
+
+.hero > div > .bigText{
+    font-size: 60px;
+}
+
+.hero > div >.bigText::first-line {
+    font-size: 70px;
+}
+.hero > div > .smallText{
+    font-size: 18px;
+    font-weight: 300;
+    color: #808080;
+    line-height: 25px;
+}
+.hero > div > a{
+    text-decoration: none;
+    background-color: #26e3ad;
+    padding: 10px 30px;
+}
+.hero > img {
+    flex: 1;
+   width: 80%;
+   position: relative;
+   left: -120px;
+}
+/* .hero > div{
+    width: 100%;
+    flex-grow: 4;
+} */
+
+
+/* SERVICES */
+.header{
+    font-size: 40px;
+    font-weight: 300;
+    text-align: center;
+    margin: 50px 0;
+}
+.services {
+    /* border: solid; */
+    padding: 30px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.services .card{
+    background-color: #ffffff;
+    box-shadow: 0 0 10px 0 #eec8c8;
+    padding: 10px;
+    text-align: center;
+    border-radius: 8px;
+    width: 32%;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.services  .icon{
+    background-color: #26e3ad;
+    display: inline-block;
+    width: 70px;
+    padding: 15px 0;
+    border-radius: 10px;
+    margin: 0 auto;
+    position: relative;
+    top: -105px;
+    font-size: 30px;
+}
+.services .title{
+    font-size: 25px;
+    font-weight: 500;
+    margin-top: -56px;
+}
+
+.services p{
+    font-size: 16px;
+    line-height: 25px;
+}
+
+.services a{
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+@media screen and (max-width: 992.9px) {
+    .hero{
+        flex-direction: column;
+        height: auto;
+    }
+    .hero > .content {
+        padding: 25px;
+        padding-top: 21px;
+        padding-left: 6px;
+    }
+    .hero > img {
+        width: 100%;
+        aspect-ratio: 16/16;
+        display: block;
+        margin: 0 auto;
+        position: static;
+        object-fit: cover;
+    }
+    .hero > div > .bigText,
+    .hero > div> .bigText::first-line {
+        font-size: 40px;
+    }
+
+    .services .card{
+        width: 31%;
+    }
+
+/* Responsive Navbar */
+    #toggler{
+        display: inline-block;
+    }
+
+    .navbar > ul{
+        background-color: #26e3ad;
+        padding: 20px;
+        padding-top: 45px;
+        position: fixed;
+        flex-direction: column;
+        gap: 40px;
+        justify-content: flex-start;
+        height: 100vh;
+        top: 0;
+        right: 0;
+        width: 250px;
+        transition: margin-right .4s ease;
+        margin-right: -260px;
+    }
+    .navbar > ul.show{
+        margin-right: 0;
+    }
+    .navbar > ul > li:first-child{
+        position: relative;
+    }
+
+    .navbar > ul .close{
+        position: absolute;
+        top: -26px;
+        left: -13px;
+        background-color:#ffffff !important;
+    }
+}
+
+@media screen and (max-width: 576.9px) {
+    .services{
+        gap: 80px;
+    }
+    .services .card{
+        width: 100%;
+    }
 }
